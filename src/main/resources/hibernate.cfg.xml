@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/flymeapp?zeroDateTimeBehavior=convertToNull</property>
+    <property name="hibernate.connection.username">root</property>
+    
+    <mapping class="com.gdev.web.flymeapp.Usr" />
+    <mapping class="com.gdev.web.flymeapp.Airplane" />
+    <mapping class="com.gdev.web.flymeapp.Credencial" />
+    <mapping class="com.gdev.web.flymeapp.Crew" />
+    <mapping class="com.gdev.web.flymeapp.Documentation" />
+    <mapping class="com.gdev.web.flymeapp.Flight" />
+    <mapping class="com.gdev.web.flymeapp.Licencia" />
+    <mapping class="com.gdev.web.flymeapp.Model" />
+    <mapping class="com.gdev.web.flymeapp.Ocupation" />
+    <mapping class="com.gdev.web.flymeapp.Passport" />
+    <mapping class="com.gdev.web.flymeapp.Persona" />
+    <mapping class="com.gdev.web.flymeapp.Visa" />
+    
+  </session-factory>
+</hibernate-configuration>

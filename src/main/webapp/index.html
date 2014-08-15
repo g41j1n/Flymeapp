@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>FlymeApp</title>
+	<link rel="stylesheet" href="css/lungo.css">
+	<link rel="stylesheet" href="css/lungo.icon.css">
+	<link rel="stylesheet" href="css/lungo.theme.css">
+	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+	
+</head>
+<body>
+
+	<aside id="settings">
+		<header data-ttle="menu"></header>
+		<article class="active">Menu</article>
+		
+	</aside>
+	
+	<section id="main_section" data-aside="settings" data-transition="slide">
+		<header data-title="FlymeApp">
+			<nav class="on-left">
+				<button data-view-aside="settings" data-icon="menu"></button>
+				</nav>
+				<nav class="on-right">
+					<button data-view-section="sec-2" data-icon="grid"></button>
+					
+				</nav>
+
+		</header>
+		<article id="main-article" class"active indented">
+		<p> <H1>FlymeApp</H1></p>
+
+	</article>
+		<article id="art-2" class="indented" data-transition="cover">
+		<p><center><H1>By gaijin</H1></center> </p>
+
+	</article>
+	<footer>
+		<nav class="with-lables">
+            <a href="#" data-label="Home" data-title="flymeApp" data-view-article="main-article" data-icon="mobile-phone" class="active"></a>
+            <a href="#" data-label="Pag2" data-title="pagina2"data-view-article="art-2" class="indented" data-icon="picture"></a>
+            
+        </nav>
+	</footer>
+		
+	</section>
+	<section id="sec-2" data-transition="cover">
+		<header data-back="home" data-tittle="log in"></header>
+		<article id="log" class="active indented splash">
+			<div class="form">
+				<fieldset data-icon="user">
+					<label>Username</label>
+					<input type="text" id="usr" placeholder="Username">
+				</fieldset>
+				<br>
+				<br>
+				<fieldset data-icon="github-alt">
+					<label>Password</label>
+					<input type="password" i="password"placeholder="password">
+									
+				</fieldset>
+				<br>
+					<br>
+					<a href="#" class="button" id="botonguardar" value="Guardar"main_section" data-icon="signin" data-label="sign in"></a>
+
+				
+			</div>
+			
+		</article>
+		
+	</section>
+
+	<script src="js/quo.js"></script>
+	<script src="js/lungo.js"></script>
+
+	<script>
+
+	Lungo.init({
+		"name":"flymeApp",
+		"version":0.001
+	});
+		botonguardar.click(function(){
+    var nombre=$("#usr").val();
+    var sueldo=$("#password").val();
+    $.ajax({
+        method:'GET',
+        url:"http://localhost:8090/flymeapp/serv/usr/"+usr+"/"+password+",
+        success:function(valor){
+            alert(valor);
+        },
+        failure:function(e){
+            alert(e);
+        }
+    });
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="com.2gdev.web_flymeapp_war_1.0PU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>com.gdev.web.flymeapp.Crew</class>
+    <class>com.gdev.web.flymeapp.Visa</class>
+    <class>com.gdev.web.flymeapp.Licencia</class>
+    <class>com.gdev.web.flymeapp.Flight</class>
+    <class>com.gdev.web.flymeapp.Usr</class>
+    <class>com.gdev.web.flymeapp.Airplane</class>
+    <class>com.gdev.web.flymeapp.Credencial</class>
+    <class>com.gdev.web.flymeapp.Persona</class>
+    <class>com.gdev.web.flymeapp.Documentation</class>
+    <class>com.gdev.web.flymeapp.Ocupation</class>
+    <class>com.gdev.web.flymeapp.Passport</class>
+    <class>com.gdev.web.flymeapp.Model</class>
+    <exclude-unlisted-classes>false</exclude-unlisted-classes>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/flymeapp?zeroDateTimeBehavior=convertToNull"/>
+      <property name="javax.persistence.jdbc.password" value=""/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.user" value="root"/>
+    </properties>
+  </persistence-unit>
+</persistence>
